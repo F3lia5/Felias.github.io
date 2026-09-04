@@ -7,17 +7,24 @@ html, body {
 .laptop-container {
     position: relative;
     display: inline-block;
+    width: 1920px;
+    height: 1080px;
+    max-width: 100%;
+    margin: 0 auto;
 }
 
 .laptop {
     display: block;
     width: 100%;
+    height: 100%;
+    object-fit: cover;
 }
+
 .enter-button {
     position: absolute;
 
-    left: 70%;
-    top: 67%;
+    left: 69%;
+    top: 74%;
 
     border: none;
     background: none;
@@ -26,6 +33,29 @@ html, body {
 }
 
 .enter-button img {
-    width: 100px;
+    width: 200px;
+    height: 100px;
     display: block;
+}
+
+.terminal-text {
+    position: absolute;
+    top: 15%;
+    left: 25%;
+
+    color: #00ff00;
+
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 24px;
+    text-align: left;
+}
+
+.cursor {
+    animation: blink 1s step-start infinite;
+}
+
+@keyframes blink {
+    50% {
+        opacity: 0;
+    }
 }
